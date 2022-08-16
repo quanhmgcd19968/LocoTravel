@@ -1,0 +1,125 @@
+.main {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    padding-top: 90px;
+    padding-bottom: 110px;
+    background-image: url("../../images/stuff.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.sub-main {
+    display: flex;
+    justify-content: center;
+    height: 560px;
+    width: 35%;
+    padding-top: 15px;
+    border-radius: 60px;
+    background-color: white;
+}
+
+.imgs {
+    padding-top: 20px;
+    justify-content: center;
+    display: flex;
+}
+
+.container-image {
+    background-color: green;
+    border-radius: 150px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 115px;
+    width: 115px;
+}
+
+.profile {
+    height: 100px;
+    width: 100px;
+    border-radius: 130px;
+}
+
+h1 {
+    margin: 12px !important;
+}
+
+input {
+    width: 300px;
+    height: 50px;
+    border-radius: 60px;
+    box-shadow: inset 0px 0px 10px 0px;
+    border: none;
+    outline: none;
+    background-color: #fff;
+}
+
+.account {
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    margin: 15px;
+}
+
+.name {
+    padding-left: 50px;
+    font-size: 15px;
+}
+
+.second-input {
+    padding-top: 20px;
+}
+
+button {
+    width: 380px;
+    height: 50px;
+    background-color: green;
+    color: white;
+    font-size: 25px;
+    border: none;
+    cursor: pointer;
+    border-radius: 60px;
+}
+
+.login-button {
+    padding-top: 25px;
+}
+
+.link {
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.login-third-party {
+    display: flex;
+    margin: 10px 0;
+    column-gap: 5px;
+}
+
+.fb {
+    background-color: #3B5998 !important;
+}
+
+.google {
+    background-color: #dd4b39 !important;
+}
+
+.btn {
+    color: #fff !important;
+    font-size: 15px !important;
+}
+
+@media only screen and (max-width: 1150px) {
+    input {
+        width: 230px;
+        font-size: 18px !important;
+    }
+    button {
+        width: 230px;
+        font-size: 20px;
+    }
+    .sub-main {
+        width: 70%;
+    }
+}
