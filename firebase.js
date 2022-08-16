@@ -1,6 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getDatabase } from "firebase/database";
 
+
 const firebaseConfig = {
     apiKey: process.env.REDIRECT_API_KEY,
     authDomain: "loco-travel-9de2e.firebaseapp.com",
