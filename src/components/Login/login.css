@@ -71,8 +71,8 @@ input {
     padding-top: 20px;
 }
 
-button {
-    width: 380px;
+#login-btn {
+    width: 200px;
     height: 50px;
     background-color: green;
     color: white;
@@ -80,6 +80,11 @@ button {
     border: none;
     cursor: pointer;
     border-radius: 60px;
+}
+
+#login-btn a {
+    text-decoration: none;
+    color: #fff;
 }
 
 .login-button {

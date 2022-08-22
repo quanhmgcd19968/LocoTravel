@@ -31,7 +31,7 @@ function Login() {
               <input type="password" placeholder="Password" className="name" />
             </div>
             <div className="login-button">
-              <button href=""><Link to="/home">Log me in</Link></button>
+              <button id="login-btn" href=""><Link to="/home">Log me in</Link></button>
             </div>
           </div>
           {/* login with 3rd parties */}
