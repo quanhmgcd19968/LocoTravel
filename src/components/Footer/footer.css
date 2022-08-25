@@ -1,0 +1,32 @@
+#page-footer {
+    display: block;
+    width: 100%;
+}
+
+#footer-copyright {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    background-color: rgb(42, 42, 46);
+    color: rgb(215, 215, 219);
+}
+
+.copyright_info {
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 300;
+    margin: 8px;
+}
+
+#footer-partner {
+    margin: 35px auto 50px;
+}
+
+#partner-list {
+    display: flex;
+    justify-content: space-around;
+}
+
+.partner_list_item {
+    height: 100px;
+}
