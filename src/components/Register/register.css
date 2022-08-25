@@ -12,7 +12,7 @@
 .sub-main {
     display: flex;
     justify-content: center;
-    height: 560px;
+    height: 580px;
     width: 35%;
     padding-top: 15px;
     border-radius: 60px;
@@ -37,13 +37,14 @@
     height: 100px;
     width: 200px;
     border-radius: 130px;
+    border: 2px solid rgb(83, 146, 249);
 }
 
-#login-title {
+#register-title {
     margin: 12px !important;
 }
 
-.login_input {
+.register_input {
     width: 300px;
     height: 50px;
     border-radius: 60px;
@@ -69,7 +70,7 @@
     padding-top: 20px;
 }
 
-#login-btn {
+#register-btn {
     width: 200px;
     height: 50px;
     background-color: green;
@@ -80,12 +81,12 @@
     border-radius: 60px;
 }
 
-#login-btn a {
+#register-btn a {
     text-decoration: none;
     color: #fff;
 }
 
-.login-button {
+.register-button {
     padding-top: 25px;
 }
 
@@ -94,31 +95,17 @@
     line-height: 25px;
 }
 
-.login-third-party {
-    display: flex;
-    margin: 10px 0;
-    column-gap: 5px;
-}
-
-.fb {
-    background-color: #3B5998 !important;
-}
-
-.google {
-    background-color: #dd4b39 !important;
-}
-
 .btn {
     color: #fff !important;
     font-size: 15px !important;
 }
 
 @media only screen and (max-width: 1150px) {
-    .login_input {
+    .register_input {
         width: 230px;
         font-size: 18px !important;
     }
-    #login-btn {
+    #register-btn {
         width: 230px;
         font-size: 20px;
     }

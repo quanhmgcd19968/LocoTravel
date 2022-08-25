@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { NavLink } from "react-bootstrap";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faGoogle } from '@fortawesome/free-brands-svg-icons';
 import './login.css';
@@ -21,17 +22,17 @@ function Login() {
           </div>
           {/* login form */}
           <div>
-            <h1>Login</h1>
+            <h1 id="login-title">Login</h1>
             <div>
               <img src={account} alt="pass" className="account" />
-              <input type="text" placeholder="Username" className="name" />
+              <input type="text" placeholder="Username" className="name login_input" />
             </div>
             <div className="second-input">
               <img src={pass} alt="pass" className="account" />
-              <input type="password" placeholder="Password" className="name" />
+              <input type="password" placeholder="Password" className="name login_input" />
             </div>
             <div className="login-button">
-              <button id="login-btn" href=""><Link to="/home">Log me in</Link></button>
+              <button id="login-btn" href=""><Link to="/">Log me in</Link></button>
             </div>
           </div>
           {/* login with 3rd parties */}
@@ -48,7 +49,7 @@ function Login() {
             <p className="link">
               <a href="#">Forgot password?</a><br />
               or <br />
-              <a href="#">Sign Up </a>now
+              <NavLink as={Link} to="/Register">Sign Up now</NavLink>
             </p>
           </div>
         </div>
