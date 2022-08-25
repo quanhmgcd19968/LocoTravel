@@ -1,4 +1,4 @@
-import { Nav, Navbar, NavLink } from "react-bootstrap";
+import { NavLink } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -14,9 +14,9 @@ const Header = () => {
       <div id="header-left">
         <nav id="header-logo-links">
           <div id="header-logo">
-            <a href="#" id="header-logo-img">
+            <NavLink id="header-logo-img" className='header_links' as={Link} to="/">
               <img src={logo} alt="" />
-            </a>
+            </NavLink>
           </div>
           <div id="header-links">
             <ul id="header-links-list">
@@ -47,9 +47,8 @@ const Header = () => {
       <div id="header-right">
         <a className="header_links" href="#" id="list-place">List your places</a>
         <div id="log-box">
-        <NavLink id="link-signin" as={Link} to="/Login">Login</NavLink>
-
-          <a className="header_links" href="#" id="link-signup">Create an account</a>
+          <NavLink id="link-signin" as={Link} to="/Login">Login</NavLink>
+          <NavLink className="header_links" id="link-signup" as={Link} to="/Register">Create an account</NavLink>
         </div>
       </div>
     </section>
