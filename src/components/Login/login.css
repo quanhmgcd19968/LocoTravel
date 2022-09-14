@@ -70,14 +70,14 @@
 }
 
 #login-btn {
-    width: 200px;
-    height: 50px;
+    width: 333px;
+    height: 45px;
     background-color: green;
     color: white;
-    font-size: 25px;
+    font-size: 18px;
     border: none;
     cursor: pointer;
-    border-radius: 60px;
+    border-radius: 0.25rem;
 }
 
 #login-btn a {
@@ -86,7 +86,7 @@
 }
 
 .login-button {
-    padding-top: 25px;
+    padding-top: 15px;
 }
 
 .link {
@@ -95,13 +95,7 @@
 }
 
 .login-third-party {
-    display: flex;
-    margin: 10px 0;
-    column-gap: 5px;
-}
-
-.fb {
-    background-color: #3B5998 !important;
+    margin: 5px 0;
 }
 
 .google {
@@ -110,7 +104,8 @@
 
 .btn {
     color: #fff !important;
-    font-size: 15px !important;
+    font-size: 18px !important;
+    width: 333px !important;
 }
 
 @media only screen and (max-width: 1150px) {
