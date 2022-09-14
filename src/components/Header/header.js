@@ -1,13 +1,29 @@
+import React, { useEffect, useState } from "react";
 import { NavLink } from "react-bootstrap";
-import { Link } from "react-router-dom";
-
+import { Link, useNavigate } from "react-router-dom";
+import * as ReactDOM from 'react-dom';
+import { query, collection, getDocs, where } from "firebase/firestore";
+import { UserAuth } from "./../../context/AuthContext";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faGoogle } from '@fortawesome/free-brands-svg-icons';
 
 import './header.css';
 import logo from "../../images/loco-travel.png";
+import { async } from "@firebase/util";
 
-const Header = () => {
+function Header() {
+  const {user, logOut} = UserAuth();
+  const navigate = useNavigate();
+  const handleLogout = async () => {
+    try {
+      await logOut();
+      navigate("/");
+    }catch (error) {
+      console.log(error);
+    }
+  }
+  console.log(user);
+
   return (
   <header id="page-header">
     <section id="header-container">
@@ -44,15 +60,23 @@ const Header = () => {
           </div>
         </nav>
       </div>
-      <div id="header-right">
-        <a className="header_links" href="#" id="list-place">List your places</a>
+      <div >
         <div id="log-box">
-          <NavLink id="link-signin" as={Link} to="/Login">Login</NavLink>
-          <NavLink className="header_links" id="link-signup" as={Link} to="/Register">Create an account</NavLink>
+          {user?.email ?
+          <div id="header-right">
+            <div>Welcome, {user?.email}</div>
+            <button onClick={handleLogout}id="link-signup" className="header_links">Logout</button>
+          </div> :
+          <div id="header-right">
+            <NavLink  id="link-signin" as={Link} to="/Login">Login</NavLink>
+            <NavLink className="header_links" id="link-signup" as={Link} to="/Register">Register</NavLink>
+          </div>  
+          }         
         </div>
+             
       </div>
     </section>
   </header>
   )
-}
+};
 export default Header;
