@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { db } from "./../../firebase/firebaseConfig";
+import { db } from "../../firebase/firebaseConfig";
 
 import {
   onSnapshot,
@@ -10,11 +10,11 @@ import {
   doc,
 } from "firebase/firestore";
 
-import "./index.css";
+import "./products.css";
 import NavBar from './navbar';
-import Footer from './../Footer/footer';
+import Footer from '../Footer/footer';
 
-function Index() {
+function Products() {
   const [newName, setNewName] = useState("");
   const [newLocation, setNewLocation] = useState("");
   const [newImage, setNewImage] = useState("");
@@ -128,4 +128,4 @@ function Index() {
   );
 }
 
-export default Index;
+export default Products;
