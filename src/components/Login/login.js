@@ -31,7 +31,7 @@ function Login() {
     e.preventDefault();
     try {
       await logIn(email, password);
-      if (user) navigate("/");
+      if (email=="admin@admin.com") navigate("/Admin/Products");
       
     } catch (error){
       console.log(error);
