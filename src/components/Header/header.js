@@ -1,15 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { NavLink } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
-import * as ReactDOM from 'react-dom';
-import { query, collection, getDocs, where } from "firebase/firestore";
 import { UserAuth } from "./../../context/AuthContext";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faGoogle } from '@fortawesome/free-brands-svg-icons';
 
 import './header.css';
 import logo from "../../images/loco-travel.png";
-import { async } from "@firebase/util";
 
 function Header() {
   const {user, logOut} = UserAuth();

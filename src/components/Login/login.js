@@ -1,12 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from 'react-router-dom';
 import { NavLink } from "react-bootstrap";
-import { useAuthState } from "react-firebase-hooks/auth";
 import { UserAuth, signInWithGoogle } from "./../../context/AuthContext";
-import {
-  signInWithEmailAndPassword, 
-  
-} from "firebase/auth";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGoogle } from '@fortawesome/free-brands-svg-icons';
@@ -31,7 +26,7 @@ function Login() {
     e.preventDefault();
     try {
       await logIn(email, password);
-      if (email=="admin@admin.com") navigate("/Admin/Products");
+      if (email==="admin@admin.com") navigate("/Admin/Products");
       
     } catch (error){
       console.log(error);

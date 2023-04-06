@@ -1,15 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { NavLink } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
-import * as ReactDOM from 'react-dom';
-import { query, collection, getDocs, where } from "firebase/firestore";
-import { UserAuth } from "../../context/AuthContext";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faGoogle } from '@fortawesome/free-brands-svg-icons';
-
 import './navbar.css';
 import logo from "../../images/loco-travel.png";
-import { async } from "@firebase/util";
 
 function NavBar() {
   const navigate = useNavigate();
@@ -20,7 +13,7 @@ function NavBar() {
       <div id="header-left">
         <nav id="header-logo-links">
           <div id="header-logo">
-            <NavLink id="header-logo-img" className='header_links' as={Link} to="/Admin/index">
+            <NavLink id="header-logo-img" className='header_links' as={Link} to="/">
               <img src={logo} alt="" />
             </NavLink>
           </div>

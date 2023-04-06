@@ -1,5 +1,3 @@
-import { ref, child, get } from "firebase/database";
-import { db } from "./firebase/firebaseConfig";
 import { AuthContextProvider } from './context/AuthContext';
 
 import {Route, Routes} from 'react-router-dom';
