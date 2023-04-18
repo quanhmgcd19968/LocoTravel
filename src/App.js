@@ -9,6 +9,7 @@ import Products from './components/Admin/products';
 import Users from './components/Admin/users';
 import UpdateUser from './components/Admin/updateUser';
 import UpdateProd from './components/Admin/updateProd';
+import ProductDetail from './components/ProductDetail/productDetail';
 
 function App() {
   
@@ -20,6 +21,7 @@ function App() {
         <Route path="/Login" element={<Login />} />
         <Route path="/Register" element={<Register />} />
         <Route path="/ForgotPwd" element={<ForgotPwd />} />
+        <Route path="/products/:productId" element={<ProductDetail />} />
         {/* admin routes */}
         <Route path="/Admin/products" element={<Products />} />
         <Route path="/Admin/products/updateProduct" element={<UpdateProd />} />
