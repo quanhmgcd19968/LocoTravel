@@ -36,6 +36,11 @@ function Header() {
                   <NavLink className='header_links' eventKey="1" as={Link} to="/">Home</NavLink>
                 </div>
               </li>
+              <li>
+                <div id="link-cart">
+                  <NavLink className='header_links' eventKey="2" as={Link} to="/Cart">Cart</NavLink>
+                </div>
+              </li>
             </ul>
           </div>
         </nav>

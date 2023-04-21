@@ -10,6 +10,7 @@ import Users from './components/Admin/users';
 import UpdateUser from './components/Admin/updateUser';
 import UpdateProd from './components/Admin/updateProd';
 import ProductDetail from './components/ProductDetail/productDetail';
+import Cart from './components/Cart/cart';
 
 function App() {
   
@@ -22,6 +23,7 @@ function App() {
         <Route path="/Register" element={<Register />} />
         <Route path="/ForgotPwd" element={<ForgotPwd />} />
         <Route path="/products/:productId" element={<ProductDetail />} />
+        <Route path="/Cart" element={<Cart />} />
         {/* admin routes */}
         <Route path="/Admin/products" element={<Products />} />
         <Route path="/Admin/products/updateProduct" element={<UpdateProd />} />
