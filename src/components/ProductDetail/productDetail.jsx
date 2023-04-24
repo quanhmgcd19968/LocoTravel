@@ -2,9 +2,11 @@ import { useParams, Link } from "react-router-dom";
 import React, { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
-import { getFirestore } from "firebase/firestore";
+import { getFirestore, addDoc } from "firebase/firestore";
+import { db } from "./../../firebase/firebaseConfig";
 import { useEffect } from "react";
 import { onSnapshot, collection, doc } from "firebase/firestore";
+import { UserAuth } from "./../../context/AuthContext";
 import "./productDetail.css";
 
 import Header from "./../Header/header";
@@ -15,6 +17,12 @@ function ProductDetail() {
   const [thisProduct, setProduct] = useState(null);
   const [cartItems, setCartItems] = useState([]);
   const { productId } = useParams();
+
+  const {user} = UserAuth();
+  console.log(user.email);
+
+  const [quantity, setProductQuantity] = useState(1);
+  const cartsCollectionRef = collection(db, "carts");
   console.log(productId);
 
   useEffect(() => {
@@ -31,22 +39,8 @@ function ProductDetail() {
     return () => unsubscribe();
   }, [productId]);
 
-  const addToCart = () => {
-    const existingItem = cartItems.find((item) => item.id === thisProduct.id);
-
-    if (existingItem) {
-      const updatedItems = cartItems.map((item) => {
-        if (item.id === thisProduct.id) {
-          return { ...item, quantity: item.quantity + 1 };
-        } else {
-          return item;
-        }
-      });
-      setCartItems(updatedItems);
-    } else {
-      const newItem = { ...thisProduct, quantity: 1 };
-      setCartItems([...cartItems, newItem]);
-    }
+  const addToCart = async () => {
+    await addDoc(cartsCollectionRef, { productId: productId,  userId: user.email, productName: thisProduct.name, productPrice: thisProduct.price, quantity: quantity});    
   };
 
   return (

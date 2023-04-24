@@ -1,3 +1,25 @@
-#cartLayout {
-    padding: 150px 200px;
+#cartMain {
+    padding: 100px 150px;
+}
+
+#total-title {
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(24, 161, 24);
+}
+
+#total-price {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#cartItems,
+#cartAmount {
+    display: inline-block;
+}
+
+#cartContent {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
