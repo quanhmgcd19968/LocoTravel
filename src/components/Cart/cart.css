@@ -23,3 +23,18 @@
     justify-content: space-around;
     align-items: center;
 }
+
+#payBtn {
+    border-radius: 5px;
+    border: 0px;
+    padding: 10px;
+    background-color: rgb(1, 178, 1);
+    color: white;
+    font-weight: bold;
+    margin: 100px 0;
+}
+
+#payBtn:hover {
+    background-color: green;
+    transition: 0.5s;
+}

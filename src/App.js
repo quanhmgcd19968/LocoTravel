@@ -11,6 +11,7 @@ import UpdateUser from './components/Admin/updateUser';
 import UpdateProd from './components/Admin/updateProd';
 import ProductDetail from './components/ProductDetail/productDetail';
 import Cart from './components/Cart/cart';
+import Invoice from './components/Invoice/invoice';
 
 function App() {
   
@@ -24,6 +25,7 @@ function App() {
         <Route path="/ForgotPwd" element={<ForgotPwd />} />
         <Route path="/products/:productId" element={<ProductDetail />} />
         <Route path="/Cart" element={<Cart />} />
+        <Route path="/Invoice" element={<Invoice />} />
         {/* admin routes */}
         <Route path="/Admin/products" element={<Products />} />
         <Route path="/Admin/products/updateProduct" element={<UpdateProd />} />

@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {  faArrowAltCircleLeft } from '@fortawesome/free-solid-svg-icons';
+import {  faArrowAltCircleLeft, faMoneyCheck } from '@fortawesome/free-solid-svg-icons';
 import "./cart.css";
 import { collection, onSnapshot, query, where } from "firebase/firestore";
 import { db } from "./../../firebase/firebaseConfig";
@@ -70,6 +70,11 @@ function Cart() {
           <div id="cartAmount">
             <p id="total-title">TOTAL: </p>
             <p id="total-price">{total()} VND</p>
+            <Link to={`/Invoice`}>
+              <button id="payBtn">
+                <FontAwesomeIcon icon={faMoneyCheck} /> Pay via QR code
+              </button>
+            </Link>
           </div>
         </div>
       </div>
