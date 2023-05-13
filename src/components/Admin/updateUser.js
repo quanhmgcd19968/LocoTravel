@@ -25,7 +25,7 @@ function UpdateUser() {
       await updateDoc(userDoc, {
         email: email,
         name: name,
-        role: role,
+        role: "user",
       });
       navigate("/Admin/Users");
     } catch (err) {
@@ -44,13 +44,6 @@ function UpdateUser() {
         value = {name}
         onChange={(event) => {
           setName(event.target.value);
-        }}
-      /><br /><br />
-      <input
-        className="admin_prod_input"
-        value = {role}
-        onChange={(event) => {
-          setRole(event.target.value);
         }}
       /><br /><br />
       <input

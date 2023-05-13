@@ -27,7 +27,7 @@ function Users() {
       authProvider: "local",
       email: newEmail,
       name: newName,
-      role: newRole,
+      role: "user",
     })
   };
   function NavigateUpdateUser(id, name, role, email)
@@ -68,13 +68,6 @@ function Users() {
         placeholder="Name..."
         onChange={(event) => {
           setNewName(event.target.value);
-        }}
-      /><br /><br />
-      <input
-        className="admin_prod_input"
-        placeholder="Role..."
-        onChange={(event) => {
-          setNewRole(event.target.value);
         }}
       /><br /><br />
       <input
