@@ -1,0 +1,25 @@
+#invoiceMain {
+    width: 100%;
+    height: auto;
+    padding-top: 100px;
+    display: flex;
+}
+
+#invoiceInfo {
+    width: 30%;
+    padding-left: 30px;
+    height: auto;
+    display: inline-block;
+    line-height: 50px;
+}
+
+#invoiceInfo h2 {
+    margin-bottom: 150px;
+}
+
+#invoiceContent {
+    width: 70%;
+    display: inline-block;
+    text-align: center;
+    background-color: lightblue;
+}
